@@ -19,7 +19,7 @@ resource "azurerm_linux_function_app" "functions-app" {
   storage_account_access_key = var.function_storage_key
   storage_account_name = var.function_storage_name
   resource_group_name = var.rgname
-  service_plan_id = azurerm_app_service_plan.asp.id
+  service_plan_id = azurerm_service_plan.asp.id
 
   site_config {
     application_stack {
