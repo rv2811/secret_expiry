@@ -33,7 +33,8 @@ env:
 
 jobs:
   secrets-read:
-    runs-on: [self-hosted, veis, terraform]
+    # runs-on: [self-hosted, veis, terraform]
+    runs-on: []
     defaults:
       run:
         shell: bash
