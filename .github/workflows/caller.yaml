@@ -22,6 +22,8 @@ jobs:
     uses: rv2811/secret_expiry/.github/workflows/main.yml@main
     with:
       branch: main
+      environment: prod
+      infra: my-infra
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
