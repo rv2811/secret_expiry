@@ -42,7 +42,7 @@ resource "azurerm_function_app_function" "function" {
 #   }
     file {
     name    = "secretexpiry.ps1"
-    content = file("../secretexpiry.ps1")
+    content = file("./secretexpiry.ps1")
   }
   config_json = jsonencode({
     "bindings" = [

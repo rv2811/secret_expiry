@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "storage" {
-  name = "functionsapp-str"
+  name = "functionsappstr111"
   resource_group_name = var.rgname
   location = var.rglocation
   account_tier = "Standard"
