@@ -44,7 +44,7 @@ resource "azurerm_function_app_function" "function" {
     name    = "secretexpiry.ps1"
     content = file("../secretexpiry.ps1")
   }
-  config_json = jsondecode({
+  config_json = jsonencode({
     "bindings" = [
       {
         "name" = "Timer",
