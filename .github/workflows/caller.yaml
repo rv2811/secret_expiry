@@ -1,0 +1,29 @@
+name: Test Reusable Terraform Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  actions: read
+  contents: read
+  id-token: write
+  pull-requests: write
+  security-events: write
+
+jobs:
+  test-terraform-workflow:
+    name: Test Terraform Workflow
+    uses: terraform-github-actions-templates/.github/workflows/terraform.yml@feature/tkt-84
+    with:
+      branch: feature/tkt-8413-TEST
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
