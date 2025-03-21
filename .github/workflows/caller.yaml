@@ -19,9 +19,9 @@ permissions:
 jobs:
   test-terraform-workflow:
     name: Test Terraform Workflow
-    uses: terraform-github-actions-templates/.github/workflows/terraform.yml@feature/tkt-84
+    uses: secret_expiry/.github/workflows/main.yml@main
     with:
-      branch: feature/tkt-8413-TEST
+      branch: main
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
