@@ -1,4 +1,4 @@
-﻿# Get today's date
+﻿# Get today's date..
  
 $today= get-date
 $expirationDate = (get-date).AddDays(3)
